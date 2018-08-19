@@ -151,6 +151,12 @@ void Widget::addChild(Widget * widget) {
     addChild(childCount(), widget);
 }
 
+void Widget::removeAllChildren() {
+    while (mChildren.size()) {
+        removeChild(mChildren.size() - 1);
+    }
+}
+
 void Widget::removeChild(const Widget *widget) {
     mChildren.erase(std::remove(mChildren.begin(), mChildren.end(), widget), mChildren.end());
     widget->decRef();

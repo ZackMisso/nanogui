@@ -139,6 +139,9 @@ public:
     /// Convenience function which appends a widget at the end
     void addChild(Widget *widget);
 
+    /// Removes all children from the widget
+    void removeAllChildren();
+
     /// Remove a child widget by index
     void removeChild(int index);
 
